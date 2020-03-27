@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>we need to take pics</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We want access your existing photos of games so that you don&apos;t have to take new pictures</string>
 	<key>CFBundleDevelopmentRegion</key>

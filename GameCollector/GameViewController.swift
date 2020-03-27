@@ -13,12 +13,26 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var gameImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     
+    @IBOutlet weak var deleteButton: UIButton!
     var imagePicker = UIImagePickerController()
+    
+    var game : Game? = nil
+
+    @IBOutlet weak var addUpdateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         imagePicker.delegate = self
+        
+        if game != nil {
+            gameImageView.image = UIImage(data: game!.image as! Data)
+            titleTextField.text = game!.title
+            
+            addUpdateButton.setTitle("Update", for: .normal)
+        }else{
+            deleteButton.isHidden = true
+        }
     }
     
 
@@ -37,19 +51,40 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+        
     }
     
     @IBAction func addTapped(_ sender: Any) {
+        if game != nil {
+            game!.title = titleTextField.text!
+            game!.image = gameImageView.image!.pngData()
+        }else{
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let game = Game(context: context)
+            game.title = titleTextField.text!
+            game.image = gameImageView.image!.pngData()
+        }
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let game = Game(context: context)
-        game.title = titleTextField.text!
-        game.image = gameImageView.image!.pngData()
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         navigationController!.popViewController(animated: true)
         
+    }
+    
+    
+    
+    @IBAction func deleteTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(game!)
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
     }
 }
