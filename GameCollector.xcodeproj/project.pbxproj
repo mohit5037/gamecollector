@@ -13,6 +13,8 @@
 		E4B6A0F6242DAC07003A992F /* GameCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4B6A0F4242DAC07003A992F /* GameCollector.xcdatamodeld */; };
 		E4B6A0F8242DAC09003A992F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B6A0F7242DAC09003A992F /* Assets.xcassets */; };
 		E4B6A0FB242DAC09003A992F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B6A0F9242DAC09003A992F /* LaunchScreen.storyboard */; };
+		E4B6A103242DB053003A992F /* silocam-d8.png in Resources */ = {isa = PBXBuildFile; fileRef = E4B6A102242DB053003A992F /* silocam-d8.png */; };
+		E4B6A105242DB128003A992F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B6A104242DB128003A992F /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E4B6A0F7242DAC09003A992F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4B6A0FA242DAC09003A992F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4B6A0FC242DAC09003A992F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4B6A102242DB053003A992F /* silocam-d8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "silocam-d8.png"; sourceTree = "<group>"; };
+		E4B6A104242DB128003A992F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		E4B6A0EC242DAC07003A992F /* GameCollector */ = {
 			isa = PBXGroup;
 			children = (
+				E4B6A102242DB053003A992F /* silocam-d8.png */,
 				E4B6A0ED242DAC07003A992F /* AppDelegate.swift */,
 				E4B6A0EF242DAC07003A992F /* ViewController.swift */,
 				E4B6A0F1242DAC07003A992F /* Main.storyboard */,
+				E4B6A104242DB128003A992F /* GameViewController.swift */,
 				E4B6A0F7242DAC09003A992F /* Assets.xcassets */,
 				E4B6A0F9242DAC09003A992F /* LaunchScreen.storyboard */,
 				E4B6A0FC242DAC09003A992F /* Info.plist */,
@@ -127,6 +133,7 @@
 			files = (
 				E4B6A0FB242DAC09003A992F /* LaunchScreen.storyboard in Resources */,
 				E4B6A0F8242DAC09003A992F /* Assets.xcassets in Resources */,
+				E4B6A103242DB053003A992F /* silocam-d8.png in Resources */,
 				E4B6A0F3242DAC07003A992F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B6A105242DB128003A992F /* GameViewController.swift in Sources */,
 				E4B6A0F6242DAC07003A992F /* GameCollector.xcdatamodeld in Sources */,
 				E4B6A0F0242DAC07003A992F /* ViewController.swift in Sources */,
 				E4B6A0EE242DAC07003A992F /* AppDelegate.swift in Sources */,
